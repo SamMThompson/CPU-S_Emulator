@@ -50,10 +50,6 @@ hlt 	     -- Halts the program
 
 Future Directions
 =================
-Improvements to the assembly "parser"
-	1. blank lines should be allowed.
-	2. comments will be implemented.
-
 The following are a list of instructions that haven't been implemented yet (but might be soon)
 	1. irt <val> -- Places <val> into the data memory at data pointer 1.
 	2. inp 	 -- Gets input from user and stores in data memory at data pointer 1.
