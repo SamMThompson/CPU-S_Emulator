@@ -87,6 +87,4 @@ def print_vals(op_code, addr):
     print("dp1: " + str(alu.get_dp1()) + "\t" + "dr1: " + str(data_mem.get_mem(alu.get_dp1())))
     print("dp2: " + str(alu.get_dp2()) + "\t" + "dr2: "+ str(data_mem.get_mem(alu.get_dp2())))
     print("acc: " + str(alu.get_acc()))
-    print()
-    print()
-    print()
+    print("\n\n\n")
