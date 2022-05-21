@@ -1,0 +1,15 @@
+ld1 0
+ld2 2
+mlt
+sto
+ld1 2
+ld2 3
+add
+sto
+ld1 1
+ld2 3
+sub
+sto
+ld1 1
+jmp 0
+hlt
