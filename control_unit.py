@@ -90,7 +90,7 @@ def execute(op_code, addr):
 # Not part of the cpu. 
 # This is used to print out values of registers
 def print_vals(op_code, addr):
-    print("ip: " + str(ins_pointer) + " \t" + str(op_code) + " " + str(addr))
+    print("ip: " + str(ins_pointer) + " \t" + "Ins:  " + str(op_code) + " " + str(addr))
     print("dp1: " + str(alu.get_dp1()) + "\t" + "dr1: " + str(data_mem.get_mem(alu.get_dp1())))
     print("dp2: " + str(alu.get_dp2()) + "\t" + "dr2: "+ str(data_mem.get_mem(alu.get_dp2())))
     print("acc: " + str(alu.get_acc()))

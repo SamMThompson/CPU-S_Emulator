@@ -4,4 +4,4 @@ def get_prog(file_name):
     for x in f:
         prog.append(x.rstrip('\n'))
     return prog
-
+    f.close()
