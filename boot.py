@@ -4,15 +4,11 @@ import get_program
 import control_unit
 import help
 
-
-
 def init_print():
-     print()
-     print("----------------------")
-     print("|  A CPU-S Emulator  |")
-     print("| by Sam M. Thompson |")
-     print("----------------------")
-     print()
+     f = open('START.txt', 'r')
+     file_contents = f.read()
+     print (file_contents)
+     f.close()
 
 
 def main():
