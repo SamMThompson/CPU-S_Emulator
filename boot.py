@@ -11,7 +11,7 @@ def init_print():
      f.close()
 
 
-def main():
+def start_up():
      init_print()
      while True:
           user_in = input("> ")
@@ -26,13 +26,16 @@ def main():
                elif user_in[:3] != "rf ":
                     print("Error")
                     break
-
-               prog=[]
-               prog = get_program.get_prog(prog_loc)
-               control_unit.start(prog)
-               control_unit.set_flag()
+               try:
+                    prog=[]
+                    prog = get_program.get_prog(prog_loc)
+                    control_unit.start(prog)
+                    control_unit.set_flag()
+               except IOError:
+                    print("ERROR: Please enter a valid command")     
+     
 
 
 
 if __name__ == '__main__':
-    main()
+    start_up()
