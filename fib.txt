@@ -1,5 +1,3 @@
-# comment
-
 ld1 4
 ld2 5
 add
