@@ -1,5 +1,5 @@
 import ir_lookup
-import instruc_mem
+#import instruc_mem
 import alu
 import boot
 import data_mem

@@ -2,7 +2,7 @@ data_mem = []
 
 def get_data_mem():
     global data_mem
-    f = open("dm.txt", "r")
+    f = open("resources/dm.txt", "r")
     for x in f:
         data_mem.append(x.rstrip('\n'))
     

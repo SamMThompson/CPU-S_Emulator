@@ -1,0 +1,11 @@
+
+
+     ----------------------
+     |  A CPU-S Emulator  |
+     | by Sam M. Thompson |
+     ----------------------
+
+
+Enter "help" to get information and instructions.
+Enter "quit" to break out.
+     

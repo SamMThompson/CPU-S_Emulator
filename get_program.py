@@ -1,6 +1,6 @@
 def get_prog(file_name):
     try:
-        f = open(file_name + ".txt", "r")
+        f = open("programs/" + file_name + ".txt", "r")
         prog = []
         for x in f:
             if x != '\n' and x[0] != "#":

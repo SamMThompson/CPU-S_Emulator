@@ -5,7 +5,7 @@ import control_unit
 import help
 
 def init_print():
-     f = open('START.txt', 'r')
+     f = open('resources/START.txt', 'r')
      file_contents = f.read()
      print (file_contents)
      f.close()
@@ -26,14 +26,11 @@ def start_up():
                elif user_in[:3] != "rf ":
                     print("Error")
                     break
-               try:
-                    prog=[]
-                    prog = get_program.get_prog(prog_loc)
-                    control_unit.start(prog)
-                    control_unit.set_flag()
-               except IOError:
-                    print("ERROR: Please enter a valid command")     
-     
+               prog=[]
+               prog = get_program.get_prog(prog_loc)
+               control_unit.start(prog)
+               control_unit.set_flag()
+               
 
 
 

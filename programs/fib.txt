@@ -1,0 +1,17 @@
+ld1 4
+ld2 5
+add
+ld1 5
+sto
+ld1 4
+ld2 5
+add
+ld1 4
+sto
+ld1 6
+ld2 7
+sub
+sto
+jmp 0
+ld1 4
+hlt
