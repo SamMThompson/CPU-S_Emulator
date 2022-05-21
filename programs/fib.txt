@@ -1,17 +1,28 @@
+# Calculates the fibonacci numbers (up to a certain point)
+
+# x5 = x4 + x5
 ld1 4
 ld2 5
 add
 ld1 5
 sto
+
+# x4 = x4 + x5
 ld1 4
 ld2 5
 add
 ld1 4
 sto
+
+# x6 = x6 - x7
+# Used so we don't have infinite recursion
 ld1 6
 ld2 7
 sub
 sto
+
+# if x6 != 0: goto line 0 
+# otherwise: put value of x4 in dr1 and halt
 jmp 0
 ld1 4
 hlt

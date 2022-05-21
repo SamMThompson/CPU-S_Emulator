@@ -1,16 +1,20 @@
+# x0 is where the result will be
+# x2 is multiplied with x0 as follows 1*2*3*4*5
+# x1 is decremented on every loop
+
 # x0 = x0 * x2
 ld1 0
 ld2 2
 mlt
 sto
 
-# x2 = x2 + x3
+# x2 = x2 + 1
 ld1 2
 ld2 3
 add
 sto
 
-# x1 = x1 - x3
+# x1 = x1 - 1
 ld1 1
 ld2 3
 sub
