@@ -2,9 +2,8 @@ from sys import float_repr_style
 import ir_lookup
 import get_program
 import control_unit
+import help
 
-def print_help():
-    print("TODO: Write help.")
 
 
 def init_print():
@@ -23,7 +22,7 @@ def main():
           if user_in == "quit":
                break
           if user_in == "help":
-               print_help()
+               help.print_help()
           else:
                prog_loc = user_in[3:]
                if user_in[:2] == "rs":
