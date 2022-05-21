@@ -2,28 +2,31 @@ import ir_lookup
 import instruc_mem
 import alu
 import boot
-
 import data_mem
 
 ins_pointer = 0
-ins_reg = ""
 hlt_flag = True
-
+slw_flag = False
 
 def set_flag():
     global hlt_flag
     hlt_flag = True    
 
+def set_slow_flag():
+    global slw_flag 
+    slw_flag = True
+
 
 def start(prog):
+    data_mem.get_data_mem()
     global ins_pointer
     global hlt_flag
     while hlt_flag:
         fetch(prog)
-        input()
+        if slw_flag:
+            input()
         ins_pointer = ins_pointer + 1
         
-
 
 def fetch(prog):
     global ins_pointer
@@ -42,9 +45,7 @@ def execute(op_code, addr):
 
     if op_code == "000" and addr != "":
         # jump if acc is zero
-        # minus one because ip will increment
-        if not alu.equal_zero(): 
-            ins_pointer = int(addr)-1
+        if not alu.equal_zero(): ins_pointer = int(addr)-1
         return 0
 
     elif op_code == "001" and addr != "":
@@ -82,6 +83,7 @@ def execute(op_code, addr):
         global hlt_flag
         hlt_flag = False
         return 0
+
 
 
 

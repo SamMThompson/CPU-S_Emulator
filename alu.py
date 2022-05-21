@@ -53,17 +53,16 @@ def store():
 
 
 
-# Used for printing
+# The following are used for printing,
+# they aren't part of the cpu
 def get_dp1():
     global data_ptr1
     return data_ptr1
 
-# Used for printing
 def get_dp2():
     global data_ptr2
     return data_ptr2
 
-# Used for printing
 def get_acc():
     global acc
     return acc

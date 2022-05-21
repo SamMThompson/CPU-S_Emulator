@@ -9,5 +9,6 @@ ir_lookup = {
     "hlt": "111"
 }
 
+
 def get_opcode(operator):
     return ir_lookup[operator]

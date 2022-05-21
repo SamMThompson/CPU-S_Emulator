@@ -1,13 +1,11 @@
-data_mem = [
-    1,
-    5,
-    1,
-    1,
-    1,
-    1,
-    9,
-    1
-]
+data_mem = []
+
+def get_data_mem():
+    global data_mem
+    f = open("dm.txt", "r")
+    for x in f:
+        data_mem.append(x.rstrip('\n'))
+    
 
 def get_mem(addr):
     global data_mem
