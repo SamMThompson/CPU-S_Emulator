@@ -20,6 +20,7 @@ def set_slow_flag():
 def start(prog):
     data_mem.get_data_mem()
     global ins_ptr
+    ins_ptr = 0
     global hlt_flag
     while hlt_flag:
         fetch(prog)
