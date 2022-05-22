@@ -14,6 +14,9 @@ This project is an odd mix of "true" simulation of a cpu and some shortcuts.
 	1. Operations (such as add, multiply, etc.) utilize python arithmetic, not Boolean logic, and
 	2. The address bus isn't implemented. Instead, components communicate directly.
 
+Data memory is "volatile". 
+That is, a program that changes data memory, only changes memory for that session.
+If you wish to make permanent changes to the data memory, you must change the dm.txt file.
 
 
 Main Components
@@ -28,7 +31,7 @@ Main Components
     
 Instruction set
 ===============
-jmp <addr> -- Jumps to the instruction line specified by <addr>
+jnz <addr> -- If dr1 != 0, jump to the instruction line specified by <addr>
 ld1 <addr> -- Places <addr> into data pointer 1
 ld2 <addr> -- Places <addr> into data pointer 2
 sto 	     -- Writes the value in the accumulator into data memory using address specified by data pointer 1
@@ -42,6 +45,9 @@ Using this emulator
 ===================
 To write an assembly program, add a txt file to the programs directory and write your code there.
 See the example programs.
+
+Note that all comments and blank lines do not count towards the instruction memory.
+Therefore, if you are using jnz, the address should be the line number, assuming comments and blank lines have been stripped.
 
 To run a assembly program, you have two choices:
 	1. "rf (the name of the text file where your program is stored)"

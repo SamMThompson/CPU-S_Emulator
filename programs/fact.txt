@@ -22,7 +22,7 @@ sto
 
 # goto line zero if x1 != 0
 ld1 1
-jmp 0
+jnz 0
 
 # Halt with 5 factorial in data register 1
 ld1 0

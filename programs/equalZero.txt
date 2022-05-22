@@ -1,0 +1,13 @@
+# There are two input values x and y.
+# If x = y, then the output equals 0,
+# if x ≠ y, then the output equals any number z with z != 0.
+# Assume x is in address 12 and y is in address 13
+
+ld1 12
+ld2 13
+sub
+sto
+jnz 7
+ld1 13
+sto
+hlt
