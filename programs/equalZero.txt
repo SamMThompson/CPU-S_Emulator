@@ -1,4 +1,4 @@
-# There are two input values x and y.
+# There are two input values x != 0 and y != 0.
 # If x = y, then the output equals 0,
 # if x ≠ y, then the output equals any number z with z != 0.
 # Assume x is in address 12 and y is in address 13

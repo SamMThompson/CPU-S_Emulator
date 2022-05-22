@@ -1,5 +1,4 @@
 import ir_lookup
-#import instruc_mem
 import alu
 import boot
 import data_mem
@@ -9,6 +8,7 @@ hlt_flag = True
 slw_flag = False
 
 def set_flag():
+    # if hlt_flag == False, then the program halts
     global hlt_flag
     hlt_flag = True    
 
