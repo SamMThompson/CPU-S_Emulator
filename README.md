@@ -1,5 +1,6 @@
 # CPU-S Emulator
 This is a simple CPU emulator -- based on the CPU-S.
+The CPU-S is a harvard architecture (data memory and instruction memory are separate).
 
 This project is an odd mix of "true" simulation of a cpu and some shortcuts.
 1. Operations (such as add, multiply, etc.) utilize python arithmetic, not Boolean logic, and
@@ -11,11 +12,13 @@ If you wish to make permanent changes to the data memory, you must change the "d
 
 
 ## Main Components
-1. Data register 1 (dr1)     -- Stores the value in data memory at data pointer 1 (dp1).
-2. Data register 2 (dr2)     -- Stores the value in data memory at data pointer 2 (dp2).
-3. Accumulator (acc)	     -- Stores the result of the previous arithmetic operation.
-4. Instruction pointer (ip)  -- Points to the next instruction in the program.
-5. Data Memory (dm.txt)      -- A txt file that stores integers.
+1. Data pointer 1 (dp1)      -- Stores a memory address.
+2. Data register 1 (dr1)     -- Stores the value in data memory at data pointer 1 (dp1).
+3. Data pointer 2 (dp2)      -- Stores a memory address.
+4. Data register 2 (dr2)     -- Stores the value in data memory at data pointer 2 (dp2).
+5. Accumulator (acc)	     -- Stores the result of the previous arithmetic operation.
+6. Instruction pointer (ip)  -- Points to the next instruction in the program.
+7. Data Memory (dm.txt)      -- A txt file that stores integers.
 
 ## Instruction Set
 - jnz (addr) -- If dr1 != 0, jump to the instruction line specified by <addr>
