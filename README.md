@@ -27,13 +27,19 @@ If you wish to make permanent changes to the data memory, you must change the "d
 - mlt        -- acc <- DR1 * DR2
 - hlt 	     -- Halts the program
 
+The assembly is white-space sensitive.
+Do not have a space before an instruction, only have one space between an operator and the address, and blank lines should not have any spaces.
+		       
+Note that all comments and blank lines do not count towards the instruction memory.
+Therefore, if you are using jnz, the address should be the line number, assuming comments and blank lines have been stripped.
+		       
+For examples, see the "program" directory.
+		       
 ## Using the emulator
 
 To write an assembly program, add a txt file to the programs directory and write your code there.
 See the example programs.
 
-Note that all comments and blank lines do not count towards the instruction memory.
-Therefore, if you are using jnz, the address should be the line number, assuming comments and blank lines have been stripped.
 
 To run a assembly program, you have two choices:
 1. "rf (the name of the text file where your program is stored)"
@@ -48,6 +54,4 @@ Each line in this dm.txt document corresponds to a memory cell.
 This is converted line-wise to a list, and therefore is addressed as RAM would be.
 To write your own data memory, simply add an integer to each line.
 
-
- To run the emulator, launch the "boot.py" file using the method of your choice.                      
-                    
+To run the emulator, launch the "boot.py" file using the method of your choice.                      
