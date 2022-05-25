@@ -21,7 +21,7 @@ If you wish to make permanent changes to the data memory, you must change the "d
 7. Data Memory (dm.txt)      -- A txt file that stores integers.
 
 ## Instruction Set
-- jnz (addr) -- If dr1 != 0, jump to the instruction line specified by <addr>
+- jnz (addr) -- If dr1 != 0, jump to the instruction line specified by (addr)
 - ld1 (addr) -- Places (addr) into data pointer 1
 - ld2 (addr) -- Places (addr) into data pointer 2
 - sto 	     -- Writes the value in the accumulator into data memory using address specified by data pointer 1
