@@ -1,4 +1,4 @@
-# CPU-S_Emulator
+# CPU-S Emulator
 This is a simple CPU emulator -- based on the CPU-S.
 
 This project is an odd mix of "true" simulation of a cpu and some shortcuts.
