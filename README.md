@@ -1,10 +1,12 @@
 # CPU-S Emulator
 This is a simple CPU emulator -- based on the CPU-S.
-The CPU-S is a harvard architecture (data memory and instruction memory are separate).
+The CPU-S is a harvard architecture (data memory and instruction memory are separate), and was taught in an undergraduate course.
+
 
 This project is an odd mix of "true" simulation of a cpu and some shortcuts.
 1. Operations (such as add, multiply, etc.) utilize python arithmetic, not Boolean logic, and
 2. The address bus isn't implemented. Instead, components communicate directly.
+3. There are no restrictions on the size of the programs written or the size of data memory.
 
 Data memory is "volatile". 
 That is, a program that changes data memory, only changes memory for that session.
