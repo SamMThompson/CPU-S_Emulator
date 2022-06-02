@@ -1,6 +1,6 @@
 # CPU-S Emulator
-This is a simple CPU emulator -- based on the CPU-S.
-The CPU-S is a harvard architecture (data memory and instruction memory are separate), and was taught in an undergraduate course.
+This is a simple toy CPU emulator -- based on the CPU-S.
+The CPU-S is a harvard architecture (data memory and instruction memory are separate), and was taught in an undergraduate course at Loughborough University.
 
 
 This project is an odd mix of "true" simulation of a cpu and some shortcuts.
@@ -23,14 +23,16 @@ If you wish to make permanent changes to the data memory, you must change the "d
 7. Data Memory (dm.txt)      -- A txt file that stores integers.
 
 ## Instruction Set
-- jnz (addr) -- If dr1 != 0, jump to the instruction line specified by (addr)
-- ld1 (addr) -- Places (addr) into data pointer 1
-- ld2 (addr) -- Places (addr) into data pointer 2
-- sto 	     -- Writes the value in the accumulator into data memory using address specified by data pointer 1
-- add        -- acc <- DR1 + DR2
-- sub        -- acc <- DR1 - DR2
-- mlt        -- acc <- DR1 * DR2
-- hlt 	     -- Halts the program
+```
+jnz (addr) -- If dr1 != 0, jump to the instruction line specified by (addr)
+ld1 (addr) -- Places (addr) into data pointer 1
+ld2 (addr) -- Places (addr) into data pointer 2
+sto 	     -- Writes the value in the accumulator into data memory using address specified by data pointer 1
+add        -- acc <- DR1 + DR2
+sub        -- acc <- DR1 - DR2
+mlt        -- acc <- DR1 * DR2
+hlt 	     -- Halts the program
+```
 
 The assembly is white-space sensitive.
 Do not have a space before an instruction, only have one space between an operator and the address, and blank lines should not have any spaces.
